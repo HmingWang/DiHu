@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiHu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="DiHu数字人文系统" Height="336.434" Width="256" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Button x:Name="button" Content="按人查询" HorizontalAlignment="Left" Margin="38,42,0,0" VerticalAlignment="Top" Width="173" Click="button_Click"/>
+
     </Grid>
 </Window>

@@ -24,5 +24,15 @@ namespace DiHu
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            new Wnd_Individual().Show();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            new SelectDataBase().Show();
+        }
     }
 }
