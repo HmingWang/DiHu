@@ -5,9 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiHu"
         mc:Ignorable="d"
-        Title="DiHu数字人文系统" Height="336.434" Width="256" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+        Title="DiHu数字人文系统" Height="415.709" Width="256" WindowStartupLocation="CenterScreen" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" Loaded="Window_Loaded">
     <Grid>
-        <Button x:Name="button" Content="按人查询" HorizontalAlignment="Left" Margin="38,42,0,0" VerticalAlignment="Top" Width="173" Click="button_Click"/>
+        <Button x:Name="button" Content="按人查询" HorizontalAlignment="Left" Margin="38,78,0,0" VerticalAlignment="Top" Width="173" Click="button_Click"/>
+        <Button x:Name="button1" Content="按入仕途径查询" HorizontalAlignment="Left" Margin="38,115,0,0" VerticalAlignment="Top" Width="173"/>
+        <Button x:Name="button2" Content="查询亲属关系" HorizontalAlignment="Left" Margin="38,151,0,0" VerticalAlignment="Top" Width="173"/>
+        <Button x:Name="button3" Content="查询社会关系" HorizontalAlignment="Left" Margin="38,189,0,0" VerticalAlignment="Top" Width="173"/>
+        <Button x:Name="button4" Content="查询社会关系网络" HorizontalAlignment="Left" Margin="38,224,0,0" VerticalAlignment="Top" Width="173"/>
+        <Button x:Name="button5" Content="查询朝代地理信息" HorizontalAlignment="Left" Margin="38,262,0,0" VerticalAlignment="Top" Width="173"/>
+        <Label x:Name="label" Content="DiHu数字人文系统" HorizontalAlignment="Left" Margin="38,24,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <Button x:Name="button6" Content="设置系统数据库" HorizontalAlignment="Left" Margin="38,335,0,0" VerticalAlignment="Top" Width="173" Click="button6_Click"/>
+        <Label x:Name="labelTips" Content="请先选择数据库文件位置：" HorizontalAlignment="Left" Margin="38,309,0,0" VerticalAlignment="Top" Foreground="Red"/>
 
     </Grid>
 </Window>

@@ -39,17 +39,16 @@ namespace DiHu
                 return;
             }
 
-            try
-            {
-                DataAccess.ConnectionString = "data source=" + this.textBox.Text;
-                DataAccess.Init();
-            }
-            catch (SQLiteException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
 
-            Close();
+              
+            DataAccess.Init(this.textBox.Text);
+            if (!DataAccess.IsConnect())
+            {
+                MessageBox.Show("数据库文件无效，请重新选择");
+                return;
+            } 
+
+           Close();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -62,5 +61,6 @@ namespace DiHu
                 this.textBox.Text = dialog.FileName;
             }
         }
+
     }
 }

@@ -75,6 +75,7 @@
     <Compile Include="SelectDataBase.xaml.cs">
       <DependentUpon>SelectDataBase.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SQLiteHelper.cs" />
     <Compile Include="Wnd_Individual.xaml.cs">
       <DependentUpon>Wnd_Individual.xaml</DependentUpon>
     </Compile>

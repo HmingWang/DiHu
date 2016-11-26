@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiHu"
         mc:Ignorable="d"
-        Title="Wnd_Individual" Height="351.724" Width="501.725">
+        Title="Wnd_Individual" Height="447.831" Width="806.52">
     <Grid>
-        <DataGrid x:Name="dataGrid" Height="227" VerticalAlignment="Bottom"/>
-        <Label x:Name="label" Content="姓名" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="79,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="查询" HorizontalAlignment="Left" Margin="204,40,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <DataGrid x:Name="dataGrid" Height="360" VerticalAlignment="Bottom"/>
+        <Label x:Name="label" Content="姓名" HorizontalAlignment="Left" Margin="18,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="57,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button" Content="查询" HorizontalAlignment="Left" Margin="182,12,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
 
     </Grid>
 </Window>

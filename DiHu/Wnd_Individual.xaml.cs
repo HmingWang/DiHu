@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Data.SQLite;
 using System.Data.SqlClient;
 using System.Collections.ObjectModel;
+using System.Data;
 
 namespace DiHu
 {
@@ -30,17 +31,19 @@ namespace DiHu
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            DataAccess.ConnectionString = @"data source=C:\Users\whaim\Desktop\cbdb_sqlite.db";
-            DataAccess.Init();
+            string sqltext = "select * from biog_main";
+            SQLiteParameter[] parms = null;
+            if (!String.IsNullOrEmpty(this.textBox.Text))
+            {
+                sqltext += " where c_name_chn like @name";
 
-            SQLiteCommand com = new SQLiteCommand("select * from biog_main where c_name_chn like '%李世民%' ",DataAccess.Connection);
-            SQLiteDataAdapter da = new SQLiteDataAdapter(com);
-            CBDB_DataSet.BIOG_MAINDataTable dt = new CBDB_DataSet.BIOG_MAINDataTable();
-            da.Fill(dt);
-
-            this.dataGrid.ItemsSource = dt;
-
-
+                parms = new SQLiteParameter[1];
+                parms[0] = new SQLiteParameter("@name", "%" + this.textBox.Text.Trim() + "%");
+            }
+           
+            DataTable dt = DataAccess.DBHelper.ExecuteDataTable(sqltext, parms);
+            
+            this.dataGrid.ItemsSource = dt.DefaultView;
         }
     }
 }

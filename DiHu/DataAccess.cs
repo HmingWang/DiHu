@@ -4,29 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using System.Data.SQLite;
-
 namespace DiHu
 {
     class DataAccess
     {
-        private static SQLiteConnection sqliteConnection;
-        private static string connectionString;
+        private static SQLiteHelper dbHelper;
 
-        public static string ConnectionString
+        public static SQLiteHelper DBHelper
         {
-            get { return connectionString; }
-            set { connectionString = value; }
-        }
-        public static SQLiteConnection Connection
-        {
-            get { return sqliteConnection; }
+            get { return dbHelper; }
         }
 
-        public static void Init()
+        public static void Init(String dbPath)
         {
-            sqliteConnection = new SQLiteConnection(connectionString);
-            sqliteConnection.Open();
+            dbHelper = new SQLiteHelper(dbPath);
         }
+
+
+        public static bool IsConnect()
+        {
+            if (dbHelper == null) return false;
+            return dbHelper.IsConnect();
+        }
+    }
+
+
+    class DAException : ApplicationException
+    {
+        public DAException(string message) : base(message) { }
     }
 }
