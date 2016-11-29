@@ -74,13 +74,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CBDB_DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cbdb_sqliteDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cbdb_sqliteDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataAccess.cs" />
     <Compile Include="SelectDataBase.xaml.cs">
       <DependentUpon>SelectDataBase.xaml</DependentUpon>
     </Compile>
     <Compile Include="SQLiteHelper.cs" />
+    <Compile Include="Wnd_Address.xaml.cs">
+      <DependentUpon>Wnd_Address.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wnd_Detail.xaml.cs">
+      <DependentUpon>Wnd_Detail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Wnd_Individual.xaml.cs">
       <DependentUpon>Wnd_Individual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wnd_Test.xaml.cs">
+      <DependentUpon>Wnd_Test.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -98,7 +112,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Wnd_Address.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wnd_Detail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Wnd_Individual.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wnd_Test.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,6 +157,17 @@
     </None>
     <None Include="CBDB_DataSet.xss">
       <DependentUpon>CBDB_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cbdb_sqliteDataSet.xsc">
+      <DependentUpon>cbdb_sqliteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cbdb_sqliteDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cbdb_sqliteDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cbdb_sqliteDataSet.xss">
+      <DependentUpon>cbdb_sqliteDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

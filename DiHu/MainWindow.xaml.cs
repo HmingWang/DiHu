@@ -61,7 +61,7 @@ namespace DiHu
             this.button2.IsEnabled = false;
             this.button3.IsEnabled = false;
             this.button4.IsEnabled = false;
-            this.button5.IsEnabled = false;
+            
         }
 
 
@@ -76,6 +76,12 @@ namespace DiHu
 
             labelTips.Visibility = Visibility.Hidden;
             return true;
+        }
+
+        private void button5_Click(object sender, RoutedEventArgs e)
+        {
+            if (IsInint())
+                new Wnd_Address().Show();
         }
     }
 }

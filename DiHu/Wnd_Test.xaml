@@ -1,0 +1,77 @@
+﻿<Window x:Class="DiHu.Wnd_Test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DiHu"
+        mc:Ignorable="d"
+        Title="Wnd_Test" Height="300" Width="474.176" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:CBDB_DataSet x:Key="cBDB_DataSet"/>
+        <CollectionViewSource x:Key="bIOG_MAINViewSource" Source="{Binding BIOG_MAIN, Source={StaticResource cBDB_DataSet}}"/>
+        <local:cbdb_sqliteDataSet x:Key="cbdb_sqliteDataSet"/>
+        <CollectionViewSource x:Key="bIOG_MAINViewSource1" Source="{Binding BIOG_MAIN, Source={StaticResource cbdb_sqliteDataSet}}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource bIOG_MAINViewSource}">
+        <DataGrid x:Name="bIOG_MAINDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource bIOG_MAINViewSource1}}" Margin="10,59,56,10" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="tts_sysnoColumn" Binding="{Binding tts_sysno}" Header="tts sysno" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_personidColumn" Binding="{Binding c_personid}" Header="c personid" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_nameColumn" Binding="{Binding c_name}" Header="c name" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_name_chnColumn" Binding="{Binding c_name_chn}" Header="c name chn" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_index_yearColumn" Binding="{Binding c_index_year}" Header="c index year" Width="SizeToHeader"/>
+                <DataGridCheckBoxColumn x:Name="c_femaleColumn" Binding="{Binding c_female}" Header="c female" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_ethnicity_codeColumn" Binding="{Binding c_ethnicity_code}" Header="c ethnicity code" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_household_status_codeColumn" Binding="{Binding c_household_status_code}" Header="c household status code" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_tribeColumn" Binding="{Binding c_tribe}" Header="c tribe" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_birthyearColumn" Binding="{Binding c_birthyear}" Header="c birthyear" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_by_nh_codeColumn" Binding="{Binding c_by_nh_code}" Header="c by nh code" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_by_nh_yearColumn" Binding="{Binding c_by_nh_year}" Header="c by nh year" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_by_rangeColumn" Binding="{Binding c_by_range}" Header="c by range" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_deathyearColumn" Binding="{Binding c_deathyear}" Header="c deathyear" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_dy_nh_codeColumn" Binding="{Binding c_dy_nh_code}" Header="c dy nh code" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_dy_nh_yearColumn" Binding="{Binding c_dy_nh_year}" Header="c dy nh year" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_dy_rangeColumn" Binding="{Binding c_dy_range}" Header="c dy range" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_death_ageColumn" Binding="{Binding c_death_age}" Header="c death age" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_death_age_approxColumn" Binding="{Binding c_death_age_approx}" Header="c death age approx" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_fl_earliest_yearColumn" Binding="{Binding c_fl_earliest_year}" Header="c fl earliest year" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_fl_ey_nh_codeColumn" Binding="{Binding c_fl_ey_nh_code}" Header="c fl ey nh code" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_fl_ey_nh_yearColumn" Binding="{Binding c_fl_ey_nh_year}" Header="c fl ey nh year" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_fl_ey_notesColumn" Binding="{Binding c_fl_ey_notes}" Header="c fl ey notes" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_fl_latest_yearColumn" Binding="{Binding c_fl_latest_year}" Header="c fl latest year" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_fl_ly_nh_codeColumn" Binding="{Binding c_fl_ly_nh_code}" Header="c fl ly nh code" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_fl_ly_nh_yearColumn" Binding="{Binding c_fl_ly_nh_year}" Header="c fl ly nh year" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_fl_ly_notesColumn" Binding="{Binding c_fl_ly_notes}" Header="c fl ly notes" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_surnameColumn" Binding="{Binding c_surname}" Header="c surname" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_surname_chnColumn" Binding="{Binding c_surname_chn}" Header="c surname chn" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_mingziColumn" Binding="{Binding c_mingzi}" Header="c mingzi" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_mingzi_chnColumn" Binding="{Binding c_mingzi_chn}" Header="c mingzi chn" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_dyColumn" Binding="{Binding c_dy}" Header="c dy" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_choronym_codeColumn" Binding="{Binding c_choronym_code}" Header="c choronym code" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_notesColumn" Binding="{Binding c_notes}" Header="c notes" Width="SizeToHeader"/>
+                <DataGridCheckBoxColumn x:Name="c_by_intercalaryColumn" Binding="{Binding c_by_intercalary}" Header="c by intercalary" Width="SizeToHeader"/>
+                <DataGridCheckBoxColumn x:Name="c_dy_intercalaryColumn" Binding="{Binding c_dy_intercalary}" Header="c dy intercalary" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_by_monthColumn" Binding="{Binding c_by_month}" Header="c by month" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_dy_monthColumn" Binding="{Binding c_dy_month}" Header="c dy month" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_by_dayColumn" Binding="{Binding c_by_day}" Header="c by day" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_dy_dayColumn" Binding="{Binding c_dy_day}" Header="c dy day" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_by_day_gzColumn" Binding="{Binding c_by_day_gz}" Header="c by day gz" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_dy_day_gzColumn" Binding="{Binding c_dy_day_gz}" Header="c dy day gz" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="tTSMQ_db_IDColumn" Binding="{Binding TTSMQ_db_ID}" Header="TTSMQ db ID" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="mQWWLinkColumn" Binding="{Binding MQWWLink}" Header="MQWWLink" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="kyotoLinkColumn" Binding="{Binding KyotoLink}" Header="Kyoto Link" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_surname_properColumn" Binding="{Binding c_surname_proper}" Header="c surname proper" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_mingzi_properColumn" Binding="{Binding c_mingzi_proper}" Header="c mingzi proper" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_name_properColumn" Binding="{Binding c_name_proper}" Header="c name proper" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_surname_rmColumn" Binding="{Binding c_surname_rm}" Header="c surname rm" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_mingzi_rmColumn" Binding="{Binding c_mingzi_rm}" Header="c mingzi rm" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_name_rmColumn" Binding="{Binding c_name_rm}" Header="c name rm" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_created_byColumn" Binding="{Binding c_created_by}" Header="c created by" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_created_dateColumn" Binding="{Binding c_created_date}" Header="c created date" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_modified_byColumn" Binding="{Binding c_modified_by}" Header="c modified by" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="c_modified_dateColumn" Binding="{Binding c_modified_date}" Header="c modified date" Width="SizeToHeader"/>
+                <DataGridCheckBoxColumn x:Name="c_self_bioColumn" Binding="{Binding c_self_bio}" Header="c self bio" Width="SizeToHeader"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
